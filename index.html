@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script type="text/javascript" src="https://assets.codepen.io/16327/ScrollTrigger.min.js"></script>    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    
+</head>
+<style>
+    .loading{position: fixed; width: 100%; height: 100%;  background-color: #000; transition: 0.3s; z-index: 11111; }
+    .loading.show {height:0 ;}
+</style>
+<body>
+    <!--<div class="loading ">
+        <div class="about about-real ">
+            <div class="about-article">
+                <div class="about-partnership target" id="about1">
+                    <div class="test">
+                        <img src="test.png" alt="">
+                    </div> 
+                    <div class="logo-ani-wrap logo-ani-wrap1">
+                        
+                        <ul class="logo-ani-box flex">
+                            <li>
+                                <img src="red-txt.png" alt="">
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    <div class="visual_line">
+                        <span class="line"></span>
+                        <span class="visual_line_txt">COPYRIGHT 🅒 2023 NOSUGARADDeD. ALL RIGHT RESERVED</span>
+                    </div> 
+                    
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="main-wrap">
+        <div class="about about-real ">
+            <div class="about-article">
+                <div class="about-partnership target" id="about2">
+                    <div class="logo-ani-wrap logo-ani-wrap2">
+                        <ul class="logo-ani-box flex">
+                            <li>
+                                <img src="red-txt.png" alt="">
+                            </li>
+                            
+                        </ul>
+                        <div class="visual-vid">
+                            <video src="visual01.mp4" loop playsinline autoplay muted></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="split-wrap" >
+            <section></section>
+              <div class="time_wrap">
+                <div class="bg_tit">
+                  <h1 class="Fjalla">맛있는 건 멋이 없고,<br> 멋있는 건 맛이 없습니다. <br>우리는 맛에서 멋을 찾습니다</h1>
+                  
+                </div>
+                <div class="time_box">
+                  <div class="time_img timeBox_1" data-speed="0.6"><img src="img/nosugar-apple.png"></div>
+                  <div class="time_img timeBox_2" data-speed="0.4"><img src="img/nosugar-abcd.png"></div>
+                  
+                </div>
+              </div>
+            <script>
+             
+              gsap.registerPlugin(ScrollTrigger);
+              // make the boxes random colors
+              gsap.set(".time_img", {
+                backgroundColor: "none"
+              });
+              // apply parallax effect to any element with a data-speed attribute
+              gsap.utils.toArray("[data-speed]").forEach(el => {
+                gsap.to(el, {
+                  y: function() {
+                    return (1 - parseFloat(el.getAttribute("data-speed"))) * (ScrollTrigger.maxScroll(window) - (this.scrollTrigger ? this.scrollTrigger.start : 0))
+                  },
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: el,
+                    start: "top center",
+                    end: "max",
+                    invalidateOnRefresh: true,
+                    scrub: true
+                  }
+                });
+              });
+            </script>
+        </section>
+        <section class="section sec03">
+            <div class="sec03-wrap">
+                <div class="sec03-box sec03-box01">
+                    <div class="sec03-vid">
+                        <video src="sec03-abcd.mp4" loop playsinline autoplay muted></video>
+                    </div>
+                    <div class="sec03-info">
+                        <div class="sec03-info-tit"><h2>사과즙</h2> <div class="tit-img"><img src="img/apple-txt.png" alt=""></div></div>
+                        <div class="sec03-info-txt"><p>과즙이나 설탕, 정제수를 사용하지 않아 더욱 건강하고, <br> 원물 100% 그대로 착즙하여 사과즙 한 포에 사과 한 개의 신선함과 맛을 느낄 수 있습니다.</p></div>
+                    </div>
+                </div>
+                <div class="sec03-box sec03-box02">
+                   
+                    <div class="sec03-info">
+                        <div class="sec03-info-tit"><h2>ABCD주스</h2> <div class="tit-img"><img src="img/abcd-txt.png" alt=""></div></div>
+                        <div class="sec03-info-txt"><p>사과와 비트, 당근, 용고를 모아 효소를 넣어 발효시킨 <br> 클렌즈 주스로 기존 ABC 주스에 D, 레드 용과를 넣어 맛과 영양을 더했습니다.</p></div>
+                    </div>
+                    <div class="sec03-vid">
+                        <video src="sec03-abcd.mp4" loop playsinline autoplay muted></video>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    <script>
+        setTimeout(function () {
+        $('.loading').addClass('show');
+    }, 2000);
+    
+    </script>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
