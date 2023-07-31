@@ -15,7 +15,8 @@
     .loading{position: fixed; width: 100%; height: 100%;  background-color: #000; transition: 0.3s; z-index: 11111; }
     .loading.show {height:0 ;}
      .test img {width: 100%;}
-     .main-wrap .logo-ani-box{top: 100px;}
+     .logo-ani-main{flex-direction: column; justify-content: flex-end;}
+     
 </style>
 <body>
     <div class="loading ">
@@ -27,16 +28,16 @@
                     </div> 
                     <div class="logo-ani-wrap logo-ani-wrap1">
                         
-                        <ul class="logo-ani-box flex">
+                        <ul class="logo-ani-box  flex">
                             <li>
-                                <img src="red-txt.png" alt="">
+                                <span>COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.</span>
                             </li>
                            
                         </ul>
                     </div>
                     <div class="visual_line">
                         <span class="line"></span>
-                        <span class="visual_line_txt">COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.</span>
+                        <span class="visual_line_txt">COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.</span>
                     </div> 
                     
                 </div>
@@ -47,15 +48,15 @@
         <div class="about about-real ">
             <div class="about-article">
                 <div class="about-partnership target" id="about2">
-                    <div class="logo-ani-wrap logo-ani-wrap2">
-                        <ul class="logo-ani-box flex">
+                    <div class="logo-ani-wrap logo-ani-wrap2 ">
+                        <ul class="logo-ani-box flex logo-ani-main">
                             <li>
-                                <img src="red-txt.png" alt="">
+                                COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.COPYRIGHT © 2023 NOSUGARADDED. ALL RIGHT RESERVED.
                             </li>
                             
                         </ul>
                         <div class="visual-vid">
-                            <video src="visual01.mp4" loop playsinline autoplay muted></video>
+                            <video src="vid/visual-main.mp4" loop playsinline autoplay muted></video>
                         </div>
                     </div>
                 </div>
@@ -103,7 +104,7 @@
             <div class="sec03-wrap">
                 <div class="sec03-box sec03-box01">
                     <div class="sec03-vid">
-                        <video src="sec03-apple.mp4" loop playsinline autoplay muted></video>
+                        <video src="vid/sec03-apple.mp4" loop playsinline autoplay muted></video>
                     </div>
                     <div class="sec03-info">
                         <div class="sec03-info-tit"><h2>사과즙</h2> <div class="tit-img"><img src="img/apple-txt.png" alt=""></div></div>
@@ -116,19 +117,14 @@
                         <div class="sec03-info-txt"><p>사과와 비트, 당근, 용고를 모아 효소를 넣어 발효시킨 <br> 클렌즈 주스로 기존 ABC 주스에 D, 레드 용과를 넣어 맛과 영양을 더했습니다.</p></div>
                     </div>
                     <div class="sec03-vid">
-                        <video src="sec03-abcd.mp4" loop playsinline autoplay muted></video>
+                        <video src="vid/sec03-abcd.mp4" loop playsinline autoplay muted></video>
                     </div>
                 </div>
                 
             </div>
         </section>
     </div>
-    <script>
-        setTimeout(function () {
-        $('.loading').addClass('show');
-    }, 3000);
-    
-    </script>
+  
 
 <script src="js/main.js"></script>
 </body>

@@ -1,4 +1,8 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@import url('https://db.onlinewebfonts.com/c/00264b8ae38cd52fbeccb71c85b34f55?family=AcuminProCond-Black');
+.mr-st{margin-top: 0px;}
+.mr-t{margin-top: 30px;}
+.mr-b{margin-bottom: 15px;}
 .flex{display: flex;}
 .column{flex-direction: column;}
 .space{justify-content: space-between;}
@@ -8,7 +12,7 @@
 .slide-txt-wrap{overflow: unset;}
 
 .about-partnership{position: relative;}
-.about .logo-ani-box{background-color: inherit !important;-webkit-animation: logo-set 10s infinite;animation: logo-set 100s infinite;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: linear;animation-timing-function: linear; position: absolute;left: 0;top: 0;  height: 100%;}
+.about .logo-ani-box{background-color: inherit !important;-webkit-animation: logo-set 10s infinite;animation: logo-set 1000s infinite;-webkit-animation-play-state: running;animation-play-state: running;-webkit-animation-timing-function: linear;animation-timing-function: linear; position: absolute;left: 0;top: 0;  height: 100%;}
 .about .logo-ani-wrap1 .logo-ani-box{align-items: center;}
 .about .logo-ani-wrap{position: relative; overflow: hidden;display: flex;   flex-direction: column;justify-content: flex-start ;height: 100vh;}  
 @keyframes logo-set{
@@ -16,11 +20,12 @@
     100%{transform: translateX(-100%);}
 }
 
-.logo-ani-box li{font-size: 190px; columns: inherit; white-space: nowrap;font-family: 'Pretendard';  font-weight: 500; color: #D90916;padding: 15px 0; font-weight: 800;}
+.logo-ani-box li{font-size: 190px;  white-space: nowrap;font-family: 'Pretendard';  font-weight: 500; color: #D90916;padding: 15px 0; font-weight: 800;}
 
-.loading {z-index: 1111111;}
+.loading {z-index: 1111111;animation-name: loadingView; animation-delay: 3s; animation-duration:0.5s;animation-fill-mode: forwards;}
 .about .logo-ani-wrap{position: relative; overflow: hidden;display: flex;   flex-direction: column;justify-content: center;height: 100vh;}
 .about .logo-ani-wrap1{justify-content: flex-end;transition: 0.3s;}
+.logo-ani-wrap1{animation-name: loadingNone; animation-delay: 3s; animation-duration:0.3s; animation-fill-mode: forwards;}
 .about .logo-ani-wrap2{ justify-content: flex-start;}
 .loading.show .typing-txt, .loading.show .typing , .loading.show .about .logo-ani-wrap1{display: none !important;}
 .visual_line{position: absolute; bottom: 30px; left: 0; color: red; display: flex; width: 100%;}  
@@ -29,9 +34,25 @@
  .line{content: "";width: 80%;height: 3px;display: block;background-color: red;margin-top: auto;animation-name: loadingLine;animation-duration:5s;animation-duration: leaner;animation-direction:alternate;animation-fill-mode: forwards;}
   
 
-  .visual_line_txt{white-space: nowrap; font-size: 30px; font-family: 'Pretendard';  font-weight: 700; margin-right: 30px; letter-spacing: -1px;}
+  .visual_line_txt{white-space: nowrap; font-size: 30px; font-family: 'Pretendard';  font-weight: 700; margin-right: 30px; letter-spacing: -1px; }
+  @keyframes loadingNone{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @keyframes loadingView{
+    0%{
+      height: 100%;
+    }
+    100%{
+      height: 0%;
 
-  
+    }
+  }
+
    @keyframes loadingLine {
   0% {
     width: 0;
@@ -88,18 +109,6 @@ p.typing-txt{
   color: #D90916;
   font-family: 'Pretendard';
  } 
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  
@@ -197,3 +206,58 @@ p.typing-txt{
    .sec03-box02 .sec03-vid{padding-bottom: 20px;}
    .sec03-box01{margin-bottom: 50px;}
  }
+
+
+ /*! juice */
+ .juice-wrap{overflow-x: hidden;}
+ .juice-wrap img{width: 100%;  }
+ .juice-wrap .product-wrap{display: flex; height: 100vh; width: 100vw; overflow: hidden;}
+ .juice-wrap .product_nosugar {width: 50%;}
+ .juice-wrap .product_nosugar .product_nosugar_content{position: absolute; left: 50%; transform: translateX(-50%); bottom: 12%; color: #db0000; display: flex; flex-direction: column; align-items: center; width: 100%; justify-content: center; margin-bottom: 15px;}
+ .juice-wrap .product_nosugar .product_nosugar_content h2{  font-family: "acumin-pro-extra-condensed", sans-serif;font-weight: 700;font-style: normal; font-size: 88px; font-weight: 500; color: #db0000; line-height: 0.85;}
+ .juice-wrap .product_nosugar_img{position: relative; }
+ .juice-wrap .product_nosugar .product_nosugar_content button{background-color:#db0000; border: 1px solid #db0000; outline: none; color: #000; border-radius: 20px; padding: 7px 20px; font-weight: 1000; font-family: 'Pretendard'; transition: 0.3s; font-size: 16px; }
+ .juice-wrap .product_nosugar .product_nosugar_content button:hover{background-color:#fff ;border: 1px solid #db0000; color: #db0000;}
+ .juice-wrap .product_nosugar .product_nosugar_content .produce-name{margin:5px 0 25px 0;font-weight: 500; font-family: 'Pretendard'; letter-spacing: 1px;}
+ .juice-wrap .product_nosugar .product_nosugar_content p {font-family: 'Pretendard';}
+ .juice-wrap .product_nosugar .product_nosugar_content p
+
+ /*!footer */
+ .footer{background-color: #e7e7e7; }
+ .footer-logo{text-align: center; border-bottom: 1px solid #333; padding:60px 0 30px 0;}
+ .footer_info , .footer_txt{display: flex; }
+ .footer_info{justify-content: space-between; font-family: 'Pretendard'; padding: 30px;} 
+
+ /*! about */
+ .about-wrap{background-color: #000;}
+ .about-wrap img{ width: 100vw; height: 100vh; }
+ .about-wrap .about-visual-img{width: 100vw; height: 100vh; overflow-y: hidden;}
+ .about-wrap .about-visual-img video{width: 100%;}
+ .about-wrap .about-con-video  img{width: 100%;}
+ .about-wrap .about-con-box{display: flex;}
+ .about-wrap .about-con-box02{flex-direction: row-reverse;}
+ .about-wrap .about-con-box02 .about-con-video{width: 60%;}
+ .about-wrap .about-con-box02 .about-con-txt{text-align: right;}
+ .about-wrap .about-con-box .about-con-txt{color: #D90916; display: flex;flex-direction: column; justify-content: flex-end; padding: 40px;}
+ .about-wrap .about-con-box .about-con-txt span{font-size: 40px;font-family: "AcuminProCond-Black"; letter-spacing: -1px;}
+ .about-wrap .about-con-box .about-con-txt h1{font-size: 88px; font-weight: 500; font-family: "AcuminProCond-Black";letter-spacing: -2px;  line-height: 0.85;margin-left: -5px; }
+ .about-wrap .about-con-box .about-con-txt p {font-size: 24px; line-height: 1.3; font-family: 'Pretendard'; font-weight: 500;}
+ .about-wrap .about-con-box .about-con-txt p:first-child{margin-top: 30px; ;}
+
+.about-visual-img{position: relative;}
+ .about-visual-txt {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; z-index: 1;}
+ .about-visual-txt {font-family: 'Pretendard'; font-size: 96px; color: #D90916; line-height: 1.3; font-weight: 800; text-align: center; letter-spacing: -2px;}
+ .bg{position: absolute;
+  width: 100%;
+  left: 100%;
+  left: 0;
+  top: 0;
+  height: 100%; }
+  
+  .about-flower{padding: 100px 0;}
+  .about-flower-cont{display: flex; align-items: center; justify-content: space-between; color: #db0000;  padding: 40px;}
+  .about-flower-cont-1 span{font-size: 40px;font-family: "AcuminProCond-Black"; }
+  .about-flower-cont-1 h1{ font-size: 48px; font-family: 'Pretendard'; font-weight: 900;}
+  .about-flower-cont-2 p {text-align: right; font-size: 20px;  font-family: 'Pretendard'; font-weight: 500; line-height: 1.3;}
+
+  
